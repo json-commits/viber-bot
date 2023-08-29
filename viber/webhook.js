@@ -1,11 +1,11 @@
 'use strict';
 
-const env = require('dotenv').config();
+require('dotenv').config();
 const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 
 const bot = new ViberBot({
-    authToken: `${env.AUTH_TOKEN}`,
+    authToken: process.env.AUTH_TOKEN,
     name: "EchoBot",
     // It is recommended to be 720x720, and no more than 100kb.
     avatar: "https://t4.ftcdn.net/jpg/00/23/72/59/360_F_23725944_W2aSrg3Kqw3lOmU4IAn7iXV88Rnnfch1.jpg"
